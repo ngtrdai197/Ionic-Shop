@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="menu" (click)="onAuthentication()"></ion-icon>
+    <ion-title>Home page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <app-product *ngFor="let item of products" [product]="item"></app-product>
+</ion-content>

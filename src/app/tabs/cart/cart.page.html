@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Carts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <app-product *ngFor="let item of productsCart" [product]="item"></app-product>
+</ion-content>

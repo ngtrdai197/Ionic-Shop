@@ -1,0 +1,20 @@
+<ion-row>
+  <ion-col size="12">
+    <ion-card>
+      <div class="cover-image">
+        <ion-img [src]="product?.UrlPhoto" (click)="onProductDetail(product?._id)">
+        </ion-img>
+        <div class="btn-group">
+          <ion-icon slot="start" name="eye"></ion-icon>
+          <ion-icon slot="start" name="cart" (click)="increment(product)"></ion-icon>
+          <ion-icon slot="start" name="heart"></ion-icon>
+        </div>
+      </div>
+      <ion-card-header>
+        <ion-card-title (click)="onProductDetail(product?._id)">{{product?.ProductName}}</ion-card-title>
+        <ion-card-title>{{product?.Price}} $</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{product?.Description}}</ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
