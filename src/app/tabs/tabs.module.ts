@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TabsPage } from './tabs.page';
+import { AuthGuard } from 'src/@core/auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
         loadChildren: './home/home.module#HomePageModule'
       },
       {
-        path: 'cart', loadChildren: './cart/cart.module#CartPageModule'
+        path: 'cart', loadChildren: './cart/cart.module#CartPageModule', canActivate: [AuthGuard]
       },
       {
         path: 'social', loadChildren: './social/social.module#SocialPageModule'

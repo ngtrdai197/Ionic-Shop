@@ -6,4 +6,5 @@
 
 <ion-content padding>
   <app-product *ngFor="let item of productsCart" [product]="item"></app-product>
+  <div class="alert" *ngIf="productsCart.length === 0">Cart's empty</div>
 </ion-content>

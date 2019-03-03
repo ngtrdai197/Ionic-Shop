@@ -1,5 +1,8 @@
 {
   "name": "shop",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "426693ab"
 }

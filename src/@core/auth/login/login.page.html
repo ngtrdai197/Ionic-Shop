@@ -1,10 +1,20 @@
 <ion-header>
   <ion-toolbar>
     <ion-back-button defaultHref="/tabs/home"></ion-back-button>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+  <form (ngSubmit)="onLogin()">
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="description"></ion-input>
+    </ion-item>
+    <ion-button type="submit" block>Login</ion-button>
+  </form>
 </ion-content>
