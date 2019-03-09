@@ -9,6 +9,7 @@ import { IProduct } from 'src/@core/interfaces/product.interface';
   styleUrls: ['./product-detail.page.scss'],
 })
 export class ProductDetailPage implements OnInit {
+  productName = '';
   isLoading = true;
   _id = '';
   product: IProduct;
@@ -24,6 +25,7 @@ export class ProductDetailPage implements OnInit {
   onFetchProductById() {
     this.productService.getProductById(this._id).subscribe(data => {
       this.product = data[0];
+      this.productName = this.product.ProductName;
       this.isLoading = false;
     });
 
